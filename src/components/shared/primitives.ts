@@ -2,7 +2,7 @@ import styled from '@emotion/styled';
 import tw from 'twin.macro';
 
 export const Banner = tw.section`
-    mb-40
+    mb-0
 `;
 
 export const CenterItems = tw.div`

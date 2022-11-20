@@ -1,6 +1,6 @@
-/** @type {import('tailwindcss').Config} */
+/** @type {Plugin} */
 // see doc for config options - https://tailwindcss.com/docs/configuration
-
+const plugin = require("tailwindcss/plugin");
 const colors = require("tailwindcss/colors");
 
 module.exports = {
@@ -35,6 +35,18 @@ module.exports = {
     "active",
     "visited",
     "disabled",
+  ],
+  plugins: [
+    require('@tailwindcss/aspect-ratio'),
+    require('@tailwindcss/typography'),
+    require('tailwindcss'),
+    plugin(function ({ addComponents }) {
+      addComponents([
+        {
+          ".container": { width: "100%" },
+        }
+      ]);
+    }),
   ],
 }
 
