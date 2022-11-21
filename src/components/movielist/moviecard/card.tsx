@@ -4,7 +4,6 @@ import {
     Link,
     LinkTypography,
     ParagraphTypography,
-    CardGroup,
     CardGroupTitle,
     CardImage,
     CardImageContainer,
@@ -15,7 +14,7 @@ import { IMAGE_BASE_URL } from '../../../constants';
 
 export const MovieCard: FC<MovieCardProps> = ({ movie }) => {
   return (
-      <CardGroup>
+      <>
           <CardImageContainer>
               <CardImage
                   src={`${IMAGE_BASE_URL}${movie.poster_path}`}
@@ -33,6 +32,6 @@ export const MovieCard: FC<MovieCardProps> = ({ movie }) => {
               </MovieTitle>
               <ParagraphTypography>{movie.release_date}</ParagraphTypography>
           </CardGroupTitle>
-      </CardGroup>
+      </>
   )
 }

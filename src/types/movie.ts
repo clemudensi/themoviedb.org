@@ -34,10 +34,12 @@ interface Movie {
     object_ids: {
         [movie: string]: string;
     };
-    page: string;
+    page: number;
     poster_path: string;
     public: boolean;
     results: MovieResult[];
+    total_pages: number;
+    total_results: number;
 }
 
 interface ApiResponse<T> {

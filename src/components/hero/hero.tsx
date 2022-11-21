@@ -8,7 +8,7 @@ import {
     Navbar,
     HeroChildContainer,
     HeroContainer,
-    Input
+    Input, Searchbar
 } from 'components'
 
 export const Hero = () => {
@@ -25,8 +25,7 @@ export const Hero = () => {
                             </TypographyCustom>
                         </H1Typography>
                         <FlexContainer>
-                            <Input placeholder="Enter movie title" />
-                            <SearchButton>Search</SearchButton>
+                            <Searchbar />
                         </FlexContainer>
                     </GridFull>
                 </HeroChildContainer>
