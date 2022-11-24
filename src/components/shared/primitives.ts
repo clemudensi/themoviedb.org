@@ -5,6 +5,10 @@ export const Banner = tw.section`
     mb-0
 `;
 
+export const BGWhite = tw.div`
+    bg-white
+`;
+
 export const CenterItems = tw.div`
     flex items-center
 `;
@@ -55,7 +59,7 @@ export const ParagraphTypography = tw.p`
     text-sm font-medium text-gray-900
 `;
 
-export const Link = tw.a``;
+export const ImageLink = tw.a``;
 
 export const FlexContainer = tw.div`
     md:flex flex-row
@@ -81,4 +85,13 @@ export const SearchButton = tw.button`
     focus:ring-0 active:bg-blue-800 
     active:shadow-lg transition 
     duration-150 ease-in-out
+`;
+
+export const CardImage = tw.img`
+    h-full w-full object-cover 
+    object-center lg:h-full lg:w-full
+`;
+
+export const GroupItemsBlock = tw.div`
+    inline-block
 `;

@@ -1,9 +1,5 @@
 import tw from 'twin.macro';
 
-export const MovieListSection = tw.div`
-    bg-white
-`;
-
 export const MovieListContainer = tw.div`
     mx-auto max-w-2xl py-16 
     px-4 sm:py-24 sm:px-6 

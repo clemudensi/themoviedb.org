@@ -1,8 +1,8 @@
 import React from 'react';
 import { QueryClient, QueryClientProvider } from 'react-query';
-import { Hero } from 'components';
-import { Movies } from 'pages';
 import { SearchMovieProvider } from 'context';
+import { BrowserRouter } from 'react-router-dom';
+import { MovieRoutes } from 'routes';
 
 const queryClient = new QueryClient()
 
@@ -10,8 +10,9 @@ function App() {
   return (
       <QueryClientProvider client={queryClient}>
           <SearchMovieProvider>
-              <Hero />
-              <Movies />
+              <BrowserRouter>
+                  <MovieRoutes/>
+              </BrowserRouter>
           </SearchMovieProvider>
       </QueryClientProvider>
   );

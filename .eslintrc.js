@@ -25,5 +25,6 @@ module.exports = {
         '@typescript-eslint/no-unsafe-member-access': 1,
         '@typescript-eslint/no-unsafe-assignment': 1,
         '@typescript-eslint/restrict-template-expressions': 0,
+        'react-hooks/exhaustive-deps': 0
     },
 };

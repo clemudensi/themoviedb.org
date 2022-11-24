@@ -11,11 +11,6 @@ export const CardImageContainer = tw.div`
     lg:aspect-none
 `;
 
-export const CardImage = tw.img`
-    h-full w-full object-cover 
-    object-center lg:h-full lg:w-full
-`;
-
 export const CardGroupTitle = tw.div`
     mt-4 flex justify-between
 `;

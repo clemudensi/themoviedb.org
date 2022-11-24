@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import tw from "twin.macro";
+import tw from 'twin.macro';
 
 export const HeroContainer = styled.div`
 	${tw`

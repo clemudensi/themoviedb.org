@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import {
     MovieListContainer,
-    MovieListSection,
+    BGWhite,
     H2Typography,
     MovieListItems,
 } from 'components';
@@ -12,13 +12,13 @@ type Props = {
 
 export const MovieList: FC<Props> = ({ children }) => {
     return (
-        <MovieListSection>
+        <BGWhite>
             <MovieListContainer>
                 <H2Typography>Top Rated Movies</H2Typography>
                 <MovieListItems>
                     {children}
                 </MovieListItems>
             </MovieListContainer>
-        </MovieListSection>
+        </BGWhite>
     )
 }

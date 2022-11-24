@@ -42,8 +42,16 @@ interface Movie {
     total_results: number;
 }
 
-interface ApiResponse<T> {
-    readonly results: T;
+interface MovieDetails extends MovieResult {
+    belongs_to_collection: {
+        id: number;
+        name: string;
+        poster_path: string;
+        backdrop_path: string;
+    }
+    budget: number;
+    homepage: string;
+    imdb_id: string;
 }
 
-export type { Movie }
+export type { Movie, MovieDetails }

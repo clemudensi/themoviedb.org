@@ -3,15 +3,15 @@ import {
     GridFull,
     H1Typography,
     Banner,
-    SearchButton,
     TypographyCustom,
     Navbar,
     HeroChildContainer,
     HeroContainer,
-    Input, Searchbar
+    Searchbar
 } from 'components'
+import { SearchbarProps} from 'types';
 
-export const Hero = () => {
+export const Hero = (props: SearchbarProps) => {
     return (
         <Banner>
             <Navbar/>
@@ -25,7 +25,7 @@ export const Hero = () => {
                             </TypographyCustom>
                         </H1Typography>
                         <FlexContainer>
-                            <Searchbar />
+                            <Searchbar handleSearch={props.handleSearch} />
                         </FlexContainer>
                     </GridFull>
                 </HeroChildContainer>

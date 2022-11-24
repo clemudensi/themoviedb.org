@@ -8,4 +8,7 @@ export const movieApi: AxiosInstance = axios.create({
     headers: {
         'Content-type': 'application/json',
     },
+    params: {
+        api_key: process.env.REACT_APP_MOVIE_API_KEY
+    }
 });
