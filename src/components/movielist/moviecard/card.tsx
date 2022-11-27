@@ -4,22 +4,14 @@ import {
     H3Typography,
     ParagraphTypography,
     CardGroupTitle,
-    CardImage,
-    CardImageContainer,
-    MovieTitle
+    MovieTitle, MovieImage
 } from 'components';
 import { MovieCardProps } from 'types';
-import { IMAGE_BASE_URL } from 'consts';
 
 export const MovieCard: FC<MovieCardProps> = ({ movie }) => {
   return (
       <Link to={`/movies/${movie.id}`}>
-          <CardImageContainer>
-              <CardImage
-                  src={`${IMAGE_BASE_URL}${movie.backdrop_path}`}
-                  alt={movie.title}
-              />
-          </CardImageContainer>
+          <MovieImage movie={movie} />
           <CardGroupTitle>
               <MovieTitle>
                   <H3Typography>

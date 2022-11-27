@@ -18,20 +18,20 @@ export const SvgContainer = styled.div<{
     height?: number
     width?: number
 }>`
-        height: auto;
-        width: auto;
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        color: ${props => (props.color ? `${props.color}` : 'inherit')};
-        cursor: pointer;
-        & svg {
-            height: ${props => (props.height ? `calc(${props.height}px + 0.5rem)` : null)};
-            width: ${props => (props.width ? `calc(.2vw + ${props.width}px)` : `.5rem`)};
-        }
-		&:hover {
-			color: rgb(139 92 246);
-		}
+    height: auto;
+    width: auto;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: ${props => (props.color ? `${props.color}` : 'inherit')};
+    cursor: pointer;
+    & svg {
+        height: ${props => (props.height ? `calc(${props.height}px + 0.5rem)` : null)};
+        width: ${props => (props.width ? `calc(.2vw + ${props.width}px)` : `.5rem`)};
+    }
+    &:hover {
+        color: rgb(139 92 246);
+    }
 `;
 
 export const GridFull = tw.div`
@@ -85,6 +85,13 @@ export const SearchButton = tw.button`
     focus:ring-0 active:bg-blue-800 
     active:shadow-lg transition 
     duration-150 ease-in-out
+`;
+
+export const CardImageContainer = tw.div`
+    min-h-fit aspect-w-1 aspect-h-1 
+    w-full overflow-hidden rounded-md
+    bg-gray-200 group-hover:opacity-75 
+    lg:aspect-none
 `;
 
 export const CardImage = tw.img`
