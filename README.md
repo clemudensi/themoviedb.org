@@ -29,18 +29,21 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `yarn eject`
+ue to time constraints the app would require the following, improvements
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### Improvements
+* Implement ErrorBoundary for application
+* Improving test coverage
+* Add e2e test
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### How the app works
+* On starting the application it fetches a list of trending movies with fetch limit set to 20
+* A search input exist, which allows searching of gif images against the API
+* The search results is gradually rendered with an infinite scroll
+* Each movie detail page renders when a movie-card is clicked
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Architectural decision
+* @emotion/styled with tailwind is used for UI design, twin-macro is used to combined both libraries efficiently
+* react-query is used for state management due to simplicity and scalability.
+* constate is a small library used to make states globally available via context
+* Alternatives includes using redux-toolkit.

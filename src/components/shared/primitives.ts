@@ -1,4 +1,5 @@
 import styled from '@emotion/styled';
+import { keyframes } from '@emotion/react'
 import tw from 'twin.macro';
 
 export const Banner = tw.section`
@@ -101,4 +102,32 @@ export const CardImage = tw.img`
 
 export const GroupItemsBlock = tw.div`
     inline-block
+`;
+
+const rotate360 = keyframes`
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+`;
+
+export const Spinner = styled.div`
+	${tw`
+		border-l-2
+		border-r-2
+		border-t-0
+		border-b-0
+		border-indigo-700
+		border-solid
+		h-12
+		w-12
+		m-6
+		p-4
+		rounded-full
+		bg-transparent
+	`}
+	animation: ${rotate360} 1s linear infinite;
+	transform: translateZ(0);
 `;

@@ -11,10 +11,10 @@ import { MovieCardProps } from 'types';
 export const MovieCard: FC<MovieCardProps> = ({ movie }) => {
   return (
       <Link to={`/movies/${movie.id}`}>
-          <MovieImage movie={movie} />
+          <MovieImage movie={movie} datd-testid="movies" />
           <CardGroupTitle>
-              <MovieTitle>
-                  <H3Typography>
+              <MovieTitle datd-testid="movies">
+                  <H3Typography datd-testid="movies">
                       {movie.title}
                   </H3Typography>
               </MovieTitle>

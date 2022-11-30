@@ -7,7 +7,7 @@ interface MovieResult {
     original_language: string;
     original_title: string;
     overview: string;
-    popularity: string;
+    popularity: number;
     poster_path: string;
     release_date: string;
     title: string;
@@ -19,7 +19,7 @@ interface MovieResult {
 interface Movie {
     average_rating: number;
     backdrop_path: string;
-    comments: {
+    comments?: {
         [movie: string]: string;
     };
     created_by: {
@@ -29,14 +29,14 @@ interface Movie {
         username: string;
     };
     description: string;
-    id: string;
+    id: number;
     name: string;
-    object_ids: {
+    object_ids?: {
         [movie: string]: string;
     };
     page: number;
     poster_path: string;
-    public: boolean;
+    public?: boolean;
     results: MovieResult[];
     total_pages: number;
     total_results: number;

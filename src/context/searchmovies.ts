@@ -1,6 +1,6 @@
 import constate from 'constate';
 import { useSearchInput } from 'hooks';
 
-const [SearchMovieProvider, useCounterContext] = constate(useSearchInput);
+const [SearchMovieProvider, useSearchContext] = constate(useSearchInput);
 
-export { SearchMovieProvider, useCounterContext };
+export { SearchMovieProvider, useSearchContext };

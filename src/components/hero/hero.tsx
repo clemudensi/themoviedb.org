@@ -9,9 +9,9 @@ import {
     HeroContainer,
     Searchbar
 } from 'components'
-import { SearchbarProps} from 'types';
+import { SearchbarProps } from 'types';
 
-export const Hero = (props: SearchbarProps) => {
+export const Hero = ({handleSearch}: SearchbarProps) => {
     return (
         <Banner>
             <Navbar/>
@@ -25,7 +25,7 @@ export const Hero = (props: SearchbarProps) => {
                             </TypographyCustom>
                         </H1Typography>
                         <FlexContainer>
-                            <Searchbar handleSearch={props.handleSearch} />
+                            <Searchbar handleSearch={handleSearch} />
                         </FlexContainer>
                     </GridFull>
                 </HeroChildContainer>
